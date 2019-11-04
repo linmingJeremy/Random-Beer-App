@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Random Beer</title>
+		<link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    	<link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+	</head>
+	
+	<style>
+
+		{
+    		font-family: "Comic Sans MS", cursive, sans-serif;
+    		line-height: 1.75;
+  			padding: 4em 1em;
+  			margin-top: 1em;
+ 		    padding-top: 1em;	
+		}
+		
+	body{
+		font-family: "Comic Sans MS", cursive, sans-serif;
+		background:linear-gradient(0deg,rgba(255,255,255,0.3),rgba(255,255,255,0.3)),url(beer.jpg);       
+        /* Full height */
+        height: 100%;
+
+       /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+		}
+		
+	button, input, optgroup, select, textarea {
+    background: #F6C90A;
+    border-radius: 6px;
+    padding: 10px 15px;
+	}
+
+
+	.description{
+
+  	width:60%;
+  
+	}
+		
+	</style>	
+	
+	<body>
+		
+		<div id = headButton align="center">
+			<h1> The random beer app </h1>
+    	   	<a th:href="@{/index}"> <input type="submit" value="show another beer" ></a>
+    	</div>
+    	
+    	<div id = beerInfo align="center">
+    		<h3> ●The beer name</h1>
+    	   	<p th:text= "${name}"></p> 
+    	
+    		<h3> ●The brewery location </h2>
+    	   	<p th:text="${location}"></p>
+    	
+    		<h3> ●The alcohol percentage (abv %)</h4>
+			<p th:text="${abv}"></p>
+			
+			<div class="description">
+    		<h3> ●The description of the beer</h3>
+			<p th:text="${description}"></p>
+			</div>
+		
+			
+		</div>
+		
+	</body>
+
+</html>
